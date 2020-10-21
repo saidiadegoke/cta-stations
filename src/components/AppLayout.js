@@ -21,12 +21,7 @@ const AppLayout = () => {
   const getStationsPerPage = () => {
     let statons = null;
     statons = Object.keys(stations).slice(page, page + PER_PAGE - 1);
-    console.log(
-      page,
-      page + PER_PAGE - 1,
-      displayedStations.length,
-      stations.length
-    );
+
     if (statons.length > 0 && displayedStations.length <= stations.length) {
       setLoaded(true);
 
